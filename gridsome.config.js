@@ -7,13 +7,26 @@
 module.exports = {
   siteName: 'Personal Blog',
   siteDescription: 'simple PersonalBlog designed width Gridsome',
+  templates: {
+    Post: '/blog/:title'
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
-        path: './content/posts/**/*.md',
+        path: 'content/**/*.md',
       }
     }
-  ]
+  ],
+  transformers: {
+    //Add markdown support to all file-system sources
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
 }

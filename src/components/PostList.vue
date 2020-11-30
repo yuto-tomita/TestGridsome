@@ -1,7 +1,6 @@
 <template>
   <div class="post-list">
     <hr />
-    aaa
     <p class="date" v-html="post.date"></p>
     <h3 class="title" v-html="post.title"></h3>
     <p class="description" v-html="post.description"></p>

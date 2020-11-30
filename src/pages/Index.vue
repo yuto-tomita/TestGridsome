@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    {{ $page.metadata.siteName }}
     <br />
     <section class="posts">
       <PostList
@@ -36,7 +35,6 @@ query {
       node {
         id
         title
-        timeToRoad
         description
         date
         path

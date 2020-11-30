@@ -8,16 +8,6 @@
 module.exports = function (api) {
   api.loadSource(({ addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-    const posts = addCollection({ typeName: 'Post' })
-    console.log(posts)
-    posts.addNode({
-      id: '1',
-      title: 'HelloWorld',
-      timeToRoad: 'aaa',
-      description: 'aaaanbbb',
-      date: '2020-11-31',
-      path: '/index'
-    })
   })
 
   api.createPages(({ createPage }) => {

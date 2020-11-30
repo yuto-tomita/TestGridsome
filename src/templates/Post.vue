@@ -19,14 +19,11 @@
 </template>
 
 <page-query>
-query Post ($path: String!) {
-	post: post (path: $path) {
-		id
+query Post ($id: ID!) {
+	post (id: $id) {
 		title
-		timeToRoad
-		description
-		date
 		path
+    date
 	}
 }
 </page-query>
