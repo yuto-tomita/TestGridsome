@@ -7,6 +7,7 @@
         :key="edge.node.id"
         :post="edge.node"
       />
+      {{ $page.allPost.edges }}
     </section>
   </Layout>
 </template>
@@ -36,8 +37,10 @@ query {
         id
         title
         description
-        date
+        date (format: "YYYY-MM-DD")
         path
+        category
+        timeToRead
       }
     }
   }

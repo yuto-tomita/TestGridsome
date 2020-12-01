@@ -8,7 +8,7 @@ module.exports = {
   siteName: 'Personal Blog',
   siteDescription: 'simple PersonalBlog designed width Gridsome',
   templates: {
-    Post: '/blog/:title'
+    Post: '/blog/:path'
   },
   plugins: [
     {
@@ -17,6 +17,9 @@ module.exports = {
         typeName: 'Post',
         path: 'content/**/*.md',
       }
+    },
+    {
+      use: 'gridsome-plugin-typescript'
     }
   ],
   transformers: {

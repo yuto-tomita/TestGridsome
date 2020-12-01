@@ -6,9 +6,10 @@
       <div class="post-title">
         <h1>{{ $page.post.title }}</h1>
         <p class="post-date">
-          {{ $page.post.date }} |
+          {{ $page.post.date }}
           {{ $page.post.timeToRead }}
-          min read
+          {{ $page.post.totalCount }}
+          {{ $page.post.id }}
         </p>
       </div>
       <div class="post-content">
@@ -20,10 +21,13 @@
 
 <page-query>
 query Post ($id: ID!) {
-	post (id: $id) {
+	post: post (id: $id) {
+    id
 		title
 		path
-    date
+    date (format: "YYYY/MM/DD")
+    content
+    timeToRead
 	}
 }
 </page-query>
