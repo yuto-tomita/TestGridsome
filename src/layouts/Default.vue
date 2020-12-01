@@ -1,18 +1,20 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">技術系</g-link>
-        <g-link class="nav__link" to="/about/">英語学習</g-link>
-        <g-link class="nav__link" to="/">日常</g-link>
-      </nav>
-    </header>
-    <slot />
+  <div>
+    <v-app>
+      <v-app-bar color="primary" app>
+        <v-toolbar-title>Title</v-toolbar-title>
+      </v-app-bar>
+      <v-main>
+        <slot />
+      </v-main>
+    </v-app>
   </div>
 </template>
+
+<script lang="ts">
+// import Vuetify from "vuetify";
+export default {};
+</script>
 
 <static-query>
 query {
@@ -23,7 +25,7 @@ query {
 </static-query>
 
 <style>
-body {
+/* body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   margin: 0;
@@ -48,5 +50,5 @@ body {
 
 .nav__link {
   margin-left: 20px;
-}
+} */
 </style>
