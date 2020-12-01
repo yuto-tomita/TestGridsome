@@ -3,6 +3,7 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import 'prismjs/themes/prism.css'
+import VueCompositionApi from '@vue/composition-api'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
@@ -11,4 +12,5 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://fonts.googleapis.com/css?family=Stylish&display=swap'
   })
   Vue.component('Layout', DefaultLayout)
+  Vue.use(VueCompositionApi)
 }
