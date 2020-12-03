@@ -1,19 +1,42 @@
 <template>
   <div>
     <v-app>
-      <v-app-bar color="primary" app>
-        <v-toolbar-title>Title</v-toolbar-title>
-      </v-app-bar>
-      <v-main>
-        <slot />
-      </v-main>
+      <v-container>
+        <v-app-bar color="accent" app dark>
+          <v-toolbar-title class="ml-10 font-weight-bold text-h4">
+            ~mynote~
+          </v-toolbar-title>
+          <!-- <v-spacer></v-spacer> -->
+          <template v-slot:extension>
+            <v-tabs v-model="state.tab" align-with-title class="ml-16">
+              <v-tab key="tab-teck" to="/">技術系記事</v-tab>
+              <v-tab key="tab-english" to="/about">英語学習</v-tab>
+              <v-tab key="tab-daily" to="/daily">日常</v-tab>
+            </v-tabs>
+          </template>
+        </v-app-bar>
+        <v-main>
+          <slot />
+        </v-main>
+      </v-container>
     </v-app>
   </div>
 </template>
 
 <script lang="ts">
-// import Vuetify from "vuetify";
-export default {};
+import { defineComponent, reactive } from "@vue/composition-api";
+export default defineComponent({
+  setup() {
+    const state = reactive({
+      tab: "",
+      tabs: ["技術系", "英語学習", "日常"],
+    });
+
+    return {
+      state,
+    };
+  },
+});
 </script>
 
 <static-query>
@@ -24,31 +47,5 @@ query {
 }
 </static-query>
 
-<style>
-/* body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-} */
+<style scoped>
 </style>
