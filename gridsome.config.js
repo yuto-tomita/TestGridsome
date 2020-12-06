@@ -10,6 +10,12 @@ module.exports = {
       options: {
         typeName: 'Post',
         path: 'content/**/*.md',
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true
+          }
+        }
       }
     },
     {

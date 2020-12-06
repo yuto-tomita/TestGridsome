@@ -15,19 +15,21 @@
       <div class="post-content">
         <p v-html="$page.post.content"></p>
       </div>
+      {{ $page }}
     </Layout>
   </div>
 </template>
 
 <page-query>
-query Post ($id: ID!) {
-	post: post (id: $id) {
-    id
-		title
-		path
-    date (format: "YYYY/MM/DD")
+query Post  ($id: ID!) {
+  post (id: $id) {
+    title
     content
-    timeToRead
-	}
+    img
+    description
+    tags {
+      id
+    }
+  }
 }
 </page-query>
