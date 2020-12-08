@@ -2,7 +2,7 @@
   <Layout>
     <br />
     <section class="posts">
-      <v-layout class="d-flex justify-center flex-wrap">
+      <v-layout class="d-flex justify-start flex-md-wrap" flat tile>
         <PostList
           v-for="edge in $page.allPost.edges"
           :key="edge.node.id"
@@ -33,7 +33,7 @@ query {
     siteName
     siteDescription
   }
-  allPost (sortBy: "date", order: ASC) {
+  allPost {
     totalCount
     edges {
       node {
@@ -55,3 +55,4 @@ query {
   margin-right: 1rem;
 }
 </style>
+

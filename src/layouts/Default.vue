@@ -9,6 +9,7 @@
           <!-- <v-spacer></v-spacer> -->
           <template v-slot:extension>
             <v-tabs v-model="state.tab" align-with-title class="ml-16">
+              <v-tab key="tab-all" to="/all-article">全ての記事</v-tab>
               <v-tab key="tab-teck" to="/">技術系記事</v-tab>
               <v-tab key="tab-english" to="/about">英語学習</v-tab>
               <v-tab key="tab-daily" to="/daily">日常</v-tab>

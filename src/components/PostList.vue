@@ -1,8 +1,8 @@
 <template>
-  <v-card class="mx-auto" max-width="400">
+  <v-card class="mx-auto" max-width="30%">
     <g-image
       height="200px"
-      width="400px"
+      width="300px"
       src="../../content/posts/img/HelloWorld.png"
     ></g-image>
     <v-card-title><p v-html="post.title"></p></v-card-title>
