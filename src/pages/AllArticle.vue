@@ -12,14 +12,24 @@
         <!-- {{ $page.allPost.edges }} -->
       </v-layout>
     </section>
+    <pagination
+      v-if="$page.allPost.pageInfo.totalPages > 1"
+      base="/all-article"
+      :totalPages="$page.allPost.pageInfo.totalPages"
+      :currentPage="$page.allPost.pageInfo.currentPage"
+    />
   </Layout>
 </template>
 
 <script>
 import PostList from "../components/PostList";
+import pagination from "../components/pagination";
+import { Pager } from "gridsome";
 export default {
   components: {
     PostList,
+    Pager,
+    pagination,
   },
   metaInfo: {
     title: "Hello, world!",
@@ -28,13 +38,17 @@ export default {
 </script>
 
 <page-query>
-query {
+query ($page: Int) {
   metadata {
     siteName
     siteDescription
   }
-  allPost {
+  allPost (sortBy: "date", order: ASC, perPage: 6, page: $page) @paginate{
     totalCount
+		pageInfo {
+			totalPages
+			currentPage
+		}
     edges {
       node {
         id
@@ -53,6 +67,27 @@ query {
 <style>
 .home-links a {
   margin-right: 1rem;
+}
+.pager {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  /* &__link {
+		color: var(--link-color);
+		text-align: center;
+		text-decoration: none;
+		padding: .5rem 1rem;
+
+		&:hover:not(.active) {
+			background-color: var(--bg-content-color);
+			border-radius: 5px;
+			color: var(--link-color);
+		}
+	} */
+}
+.pager a {
+  width: 100px;
 }
 </style>
 
