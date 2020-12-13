@@ -7,6 +7,7 @@
           v-for="edge in $page.allPost.edges"
           :key="edge.node.id"
           :post="edge.node"
+          :status="`allArticlePage`"
           class="mt-5"
         />
         <!-- {{ $page.allPost.edges }} -->
@@ -43,7 +44,7 @@ query ($page: Int) {
     siteName
     siteDescription
   }
-  allPost (sortBy: "date", order: ASC, perPage: 6, page: $page) @paginate{
+  allPost (sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate{
     totalCount
 		pageInfo {
 			totalPages

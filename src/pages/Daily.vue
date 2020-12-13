@@ -3,13 +3,7 @@
     <br />
     <section class="posts">
       <v-layout class="d-flex flex-row justify-center flex-wrap">
-        <PostList
-          v-for="edge in $page.allPost.edges"
-          :key="edge.node.id"
-          :post="edge.node"
-          class="mt-5"
-        />
-        <!-- {{ $page.allPost.edges }} -->
+        <h1>日常系の記事をあげる予定</h1>
       </v-layout>
     </section>
   </Layout>

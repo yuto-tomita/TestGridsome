@@ -1,5 +1,6 @@
 <template>
-  <v-card class="mx-auto" max-width="30%">
+  <v-card class="mx-auto" :style="status ? 'width: 30%' : ''">
+    <!-- {{ status }} -->
     <g-image
       height="200px"
       width="300px"
@@ -21,7 +22,7 @@
 
 <script lang="ts">
 export default {
-  props: ["post"],
+  props: ["post", "status"],
 };
 </script>
 
