@@ -1,6 +1,7 @@
 module.exports = {
   siteName: 'Personal Blog',
   siteDescription: 'simple PersonalBlog designed width Gridsome',
+  siteUrl: 'https://5fd617d5260f054fd930ab59--quirky-hodgkin-6fe4f2.netlify.app',
   templates: {
     Post: '/blog/:path'
   },
