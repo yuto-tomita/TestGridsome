@@ -33,7 +33,7 @@ export default {
     pagination,
   },
   metaInfo: {
-    title: "Hello, world!",
+    title: "yuto's",
   },
 };
 </script>

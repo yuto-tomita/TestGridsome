@@ -17,5 +17,8 @@ export default defineComponent({
 
     return { state };
   },
+  metaInfo: {
+    title: "yuto's",
+  },
 });
 </script>
