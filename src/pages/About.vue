@@ -8,7 +8,7 @@
 import { defineComponent, reactive } from "@vue/composition-api";
 export default defineComponent({
   metaInfo: {
-    title: "About us",
+    title: "yuto's",
   },
   setup() {
     const state = reactive({

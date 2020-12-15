@@ -27,13 +27,13 @@
             &larr; トップ画面に戻る
           </g-link>
         </div>
-        <div class="flex-item">
+        <div class="flex-item ml-7">
           <h3 style="text-align: center">筆者情報</h3>
           <SelfIntroduction />
           <h3 style="text-align: center">新着記事</h3>
           <!-- {{ $page.allPost.edges }} -->
           <div v-for="(item, index) in $page.allPost.edges" :key="index">
-            <PostList :post="item" />
+            <PostList :post="item.node" />
           </div>
         </div>
       </v-layout>
@@ -74,6 +74,9 @@ query Post  ($id: ID!) {
     edges {
       node {
         title
+        description
+        timeToRead
+        path
       }
     }
   }

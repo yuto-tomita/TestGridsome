@@ -21,7 +21,7 @@ export default {
     PostList,
   },
   metaInfo: {
-    title: "Hello, world!",
+    title: "yuto's",
   },
 };
 </script>
