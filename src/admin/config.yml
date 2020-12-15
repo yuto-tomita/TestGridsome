@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: github-username/repo-name
+  name: yuto-tomita
+  repo: yuto-tomita/TestGridsome
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
