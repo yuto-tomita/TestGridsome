@@ -1,5 +1,5 @@
 backend:
-  name: yuto-tomita
+  name: github
   repo: yuto-tomita/TestGridsome
 
 media_folder: "static/uploads"
