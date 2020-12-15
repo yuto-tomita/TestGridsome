@@ -16,6 +16,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.0",
+    "netlify-cms": "^2.10.76",
     "vuetify": "^2.3.19"
   },
   "devDependencies": {

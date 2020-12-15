@@ -53,6 +53,12 @@ module.exports = {
         whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/]
       }
     },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
+    },
   ],
   transformers: {
     //Add markdown support to all file-system sources
@@ -64,7 +70,4 @@ module.exports = {
       ]
     }
   },
-  chainWebpack(config) {
-    config.resolve.alias.set('@images', '@assets/images')
-  }
 }
