@@ -17,3 +17,4 @@ collections:
       - {label: "公開日", name: "date", widget: "date", format: "YYYY-MM-DD"}
       - {label: "内容", name: "body", widget: "markdown"}
       - {label: "タグ", name: "tags", widget: "string"}
+      - {label: "パス", name: "path", widget: "string"}
