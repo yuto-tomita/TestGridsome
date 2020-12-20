@@ -4,7 +4,7 @@ description: "筆者の自己紹介"
 date: 2020-12-15
 img: HelloWorld.png
 tags: ['teck']
-path: teck/1
+path: article/1
 ---
 
 # 自己紹介

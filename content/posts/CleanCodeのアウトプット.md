@@ -3,6 +3,7 @@ title: 【名著】CleanCodeのアウトプット①
 description: 第一章のアウトプット
 date: 2020-12-20
 tags: ['teck', 'リファクタリング']
+path: article/3
 ---
 
 # 最初にCleanCodeとは
