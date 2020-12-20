@@ -60,6 +60,12 @@ module.exports = {
         publicPath: `/admin`
       }
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'G-K7HXEZQBGV'
+      }
+    }
   ],
   transformers: {
     //Add markdown support to all file-system sources
